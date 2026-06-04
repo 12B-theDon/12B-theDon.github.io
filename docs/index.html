@@ -21,6 +21,9 @@
         --soft-card: #fafafe;
         --tag-bg: #ffffff;
         --milestone-bg: #ffffff;
+        --header-bg: rgba(255, 255, 255, 0.88);
+        --header-border: rgba(227, 227, 232, 0.9);
+        --header-shadow: 0 8px 28px rgba(22, 22, 28, 0.1);
         color-scheme: light;
       }
 
@@ -37,6 +40,9 @@
           --soft-card: #222230;
           --tag-bg: #181820;
           --milestone-bg: #ffffff;
+          --header-bg: rgba(26, 26, 34, 0.9);
+          --header-border: rgba(255, 255, 255, 0.12);
+          --header-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
           color-scheme: dark;
         }
       }
@@ -53,6 +59,9 @@
         --soft-card: #fafafe;
         --tag-bg: #ffffff;
         --milestone-bg: #ffffff;
+        --header-bg: rgba(255, 255, 255, 0.88);
+        --header-border: rgba(227, 227, 232, 0.9);
+        --header-shadow: 0 8px 28px rgba(22, 22, 28, 0.1);
         color-scheme: light;
       }
 
@@ -68,6 +77,9 @@
         --soft-card: #222230;
         --tag-bg: #181820;
         --milestone-bg: #ffffff;
+        --header-bg: rgba(26, 26, 34, 0.9);
+        --header-border: rgba(255, 255, 255, 0.12);
+        --header-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
         color-scheme: dark;
       }
 
@@ -104,14 +116,15 @@
         width: min(1180px, calc(100% - 36px));
         margin: 18px auto 0;
         padding: 16px 22px;
-        border: 1px solid rgba(227, 227, 232, 0.9);
+        border: 1px solid var(--header-border);
         border-radius: 18px;
-        background: rgba(255, 255, 255, 0.86);
-        box-shadow: 0 8px 28px rgba(22, 22, 28, 0.1);
+        background: var(--header-bg);
+        box-shadow: var(--header-shadow);
         backdrop-filter: blur(14px);
       }
 
       .brand {
+        color: var(--text);
         font-size: 1.05rem;
         font-weight: 800;
         letter-spacing: -0.03em;
@@ -180,7 +193,7 @@
         display: grid;
         grid-template-columns: minmax(0, 1fr) 220px;
         gap: 38px;
-        align-items: center;
+        align-items: start;
         padding: clamp(28px, 5vw, 48px);
       }
 
@@ -259,6 +272,7 @@
       }
 
       .profile-card {
+        align-self: start;
         margin: 0;
       }
 
@@ -505,7 +519,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=16" />
+    <link rel="stylesheet" href="style.css?v=17" />
   </head>
   <body>
     <header class="site-header">
@@ -514,9 +528,6 @@
         <a href="#about">About</a>
         <a href="#cv">CV</a>
         <a href="#study-materials">Study</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-          <span aria-hidden="true">◐</span>
-        </button>
         <a
           class="icon-link"
           href="https://github.com/12B-theDon"
@@ -545,6 +556,9 @@
             />
           </svg>
         </a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+        </button>
       </nav>
     </header>
 
