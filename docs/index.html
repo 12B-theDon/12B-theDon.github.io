@@ -6,17 +6,80 @@
     <title>Minhyeong Lee</title>
     <meta
       name="description"
-      content="Education, research interests, experiences, and skills of Minhyeong Lee."
+      content="Personal website of Minhyeong Lee: robotics research interests, news, CV, and skills."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="resume">
-      <header class="page-header">
-        <h1>Minhyeong Lee</h1>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#about">Minhyeong Lee</a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#cv">CV</a>
+      </nav>
+    </header>
 
-      <section class="section" aria-labelledby="life-milestone">
+    <main>
+      <section id="about" class="hero-card">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h1>Minhyeong Lee</h1>
+          <p class="intro">
+            I am an undergraduate student in Smart Mobility Engineering at Inha
+            University. My work focuses on robotics, embodied intelligence, and
+            learning-based robot control.
+          </p>
+          <div class="interest-box">
+            <h2>Research Interests</h2>
+            <ul>
+              <li>
+                Vision-Language-Action Models for Real-World Robot Control
+              </li>
+              <li>
+                Reinforcement Learning and World Models for Embodied Robotics
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="profile-card">
+          <img src="profile.jpg" alt="Portrait of Minhyeong Lee" />
+        </figure>
+      </section>
+
+      <section class="section-card" aria-labelledby="news">
+        <h2 id="news">News</h2>
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <div class="date-badge">2025.08 – 2026.05</div>
+            <div class="timeline-content">
+              <h3>
+                Undergraduate Research Intern, Artificial Embodiment of Motion
+                Intelligence Systems Laboratory
+              </h3>
+              <p>
+                Team LAICA, Inha University — adaptive quadruped robot control,
+                robotic platforms, and embedded computing environments.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="date-badge">2024.05 – 2025.03</div>
+            <div class="timeline-content">
+              <h3>
+                Undergraduate Research Intern, Robot Computer Vision Laboratory
+              </h3>
+              <p>
+                RCV Formula, Team DAMVI, Inha University — SLAM, dynamic object
+                detection, tracking, and visual odometry.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card" aria-labelledby="life-milestone">
         <h2 id="life-milestone">Life Milestone</h2>
         <figure class="milestone">
           <img
@@ -26,152 +89,122 @@
         </figure>
       </section>
 
-      <section class="section" aria-labelledby="education">
-        <h2 id="education">Education</h2>
+      <section id="cv" class="section-card">
+        <h2>CV</h2>
 
-        <article class="entry">
-          <div class="entry-heading">
-            <h3>Inha University</h3>
-            <div class="entry-meta">
-              <span>March 2021 – Present</span>
-              <span>Incheon, Korea</span>
+        <div class="cv-block">
+          <h3>Education</h3>
+          <div class="cv-entry">
+            <div class="date-badge">2021–Present</div>
+            <div>
+              <h4>Inha University</h4>
+              <p>Bachelor's Degree expected in Smart Mobility Engineering</p>
+              <ul>
+                <li>Overall GPA: 4.29 / 4.50, Major GPA: 4.30 / 4.50</li>
+                <li>
+                  Republic of Korea Army (KATUSA); Sergeant, Honorable
+                  Discharged (July 2022 - Jan 2024)
+                </li>
+              </ul>
             </div>
           </div>
-          <p class="entry-subtitle">
-            Bachelor's Degree expected in Smart Mobility Engineering
-          </p>
-          <ul>
-            <li>Overall GPA: 4.29 / 4.50, Major GPA: 4.30 / 4.50</li>
-            <li>
-              Republic of Korea Army (KATUSA); Sergeant, Honorable Discharged
-              (July 2022 - Jan 2024)
-            </li>
-          </ul>
-        </article>
 
-        <article class="entry">
-          <div class="entry-heading">
-            <h3>Chungnam Samsung Academy High School</h3>
-            <div class="entry-meta">
-              <span>March 2017 – February 2020</span>
-              <span>Asan, Chungcheungnam-do</span>
+          <div class="cv-entry">
+            <div class="date-badge">2017–2020</div>
+            <div>
+              <h4>Chungnam Samsung Academy High School</h4>
+              <p>Honor Diploma of Engineering and Bilingual Diploma</p>
+              <ul>
+                <li>
+                  Grand Prize (1st) awarded Paper in School Academic Research
+                  Conference for Engineering (2018)
+                </li>
+                <li>Student President of the CNSA Makers Club (2018 – 2019)</li>
+              </ul>
             </div>
           </div>
-          <p class="entry-subtitle">
-            Honor Diploma of Engineering and Bilingual Diploma
-          </p>
-          <ul>
-            <li>
-              Grand Prize (1st) awarded Paper in School Academic Research
-              Conference for Engineering (2018)
-            </li>
-            <li>Student President of the CNSA Makers Club (2018 – 2019)</li>
-          </ul>
-        </article>
-      </section>
+        </div>
 
-      <section class="section" aria-labelledby="research-interests">
-        <h2 id="research-interests">Research Interests</h2>
-        <ul>
-          <li>
-            Vision-Language-Action Models for Real-World Robot Control
-          </li>
-          <li>
-            Reinforcement Learning and World Models for Embodied Robotics
-          </li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="experiences">
-        <h2 id="experiences">Experiences</h2>
-
-        <article class="entry">
-          <div class="entry-heading">
-            <h3>
-              Undergraduate Research Intern, Artificial Embodiment of Motion
-              Intelligence Systems Laboratory
-            </h3>
-            <div class="entry-meta">
-              <span>August 2025 – May 2026</span>
-              <span>Inha University</span>
+        <div class="cv-block">
+          <h3>Experiences</h3>
+          <div class="cv-entry">
+            <div class="date-badge">2025.08 – 2026.05</div>
+            <div>
+              <h4>
+                Undergraduate Research Intern, Artificial Embodiment of Motion
+                Intelligence Systems Laboratory
+              </h4>
+              <p>
+                Team LAICA (Legged Adaptive Interaction for Cooperative
+                Assistance), Inha University
+              </p>
+              <ul>
+                <li>
+                  Personalized · Adaptive Quadruped Robot Control (Learning ·
+                  Admittance Control based)
+                </li>
+                <li>
+                  Developed Robotic Platforms and Integrated Embedded Computing
+                  Environments
+                </li>
+                <li>
+                  Mobile Manipulator (Deep Reinforcement Learning · World Model
+                  · Vision Language Action Model)
+                </li>
+                <li>
+                  State Estimation Benchmark (Particle Filter · Extended Kalman
+                  Filter)
+                </li>
+              </ul>
             </div>
           </div>
-          <p class="entry-subtitle">
-            Team LAICA (Legged Adaptive Interaction for Cooperative Assistance)
-          </p>
-          <ul>
-            <li>
-              Personalized · Adaptive Quadruped Robot Control (Learning ·
-              Admittance Control based)
-            </li>
-            <li>
-              Developed Robotic Platforms and Integrated Embedded Computing
-              Environments
-            </li>
-          </ul>
-          <p class="entry-subtitle">Internship Programs</p>
-          <ul>
-            <li>
-              Mobile Manipulator (Deep Reinforcement Learning · World Model ·
-              Vision Language Action Model)
-            </li>
-            <li>
-              State Estimation Benchmark (Particle Filter · Extended Kalman
-              Filter)
-            </li>
-          </ul>
-        </article>
 
-        <article class="entry">
-          <div class="entry-heading">
-            <h3>
-              Undergraduate Research Intern, Robot Computer Vision Laboratory
-            </h3>
-            <div class="entry-meta">
-              <span>May 2024 – March 2025</span>
-              <span>Inha University</span>
+          <div class="cv-entry">
+            <div class="date-badge">2024.05 – 2025.03</div>
+            <div>
+              <h4>
+                Undergraduate Research Intern, Robot Computer Vision Laboratory
+              </h4>
+              <p>
+                RCV Formula, Team DAMVI (Dynamic Autonomous Mobility Vision
+                Based, from INHA, F1tenth), Inha University
+              </p>
+              <ul>
+                <li>
+                  2D Lidar IMU Simultaneous Localization and Mapping (Pose Graph
+                  based)
+                </li>
+                <li>
+                  Dynamic Object Detection · Tracking (DBSCAN · Kalman Filter
+                  based)
+                </li>
+                <li>
+                  Developed Robotic Platforms and Integrated Embedded Computing
+                  Environments
+                </li>
+                <li>Visual Odometry with Multiple Monocular Cameras</li>
+              </ul>
             </div>
           </div>
-          <p class="entry-subtitle">
-            RCV Formula, Team DAMVI (Dynamic Autonomous Mobility Vision Based,
-            from INHA, F1tenth)
-          </p>
-          <ul>
-            <li>
-              2D Lidar IMU Simultaneous Localization and Mapping (Pose Graph
-              based)
-            </li>
-            <li>
-              Dynamic Object Detection · Tracking (DBSCAN · Kalman Filter based)
-            </li>
-            <li>
-              Developed Robotic Platforms and Integrated Embedded Computing
-              Environments
-            </li>
-            <li>Visual Odometry with Multiple Monocular Cameras</li>
-          </ul>
-        </article>
-      </section>
+        </div>
 
-      <section class="section" aria-labelledby="technical-skills">
-        <h2 id="technical-skills">Technical Skills</h2>
-        <ul>
-          <li>
-            <strong>Programming Language:</strong> C/C++, Python, MATLAB
-          </li>
-          <li>
-            <strong>Development:</strong> ROS2, ROS1, Git, Docker, Gazebo,
-            Mujoco, Auto Fusion
-          </li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="language-skills">
-        <h2 id="language-skills">Language Skills</h2>
-        <ul>
-          <li><strong>English:</strong> New TEPS(445)</li>
-          <li><strong>Korean:</strong> Native</li>
-        </ul>
+        <div class="cv-grid">
+          <div class="skill-card">
+            <h3>Technical Skills</h3>
+            <p>
+              <strong>Programming Language:</strong> C/C++, Python, MATLAB
+            </p>
+            <p>
+              <strong>Development:</strong> ROS2, ROS1, Git, Docker, Gazebo,
+              Mujoco, Auto Fusion
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>Language Skills</h3>
+            <p><strong>English:</strong> New TEPS(445)</p>
+            <p><strong>Korean:</strong> Native</p>
+          </div>
+        </div>
       </section>
     </main>
   </body>
