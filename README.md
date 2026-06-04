@@ -2,8 +2,12 @@
 
 Personal website hosted with GitHub Pages.
 
+GitHub Pages is configured to deploy from `main` / `docs`.
+
 ## Sections
 
-- About
 - Education
-- News
+- Research Interests
+- Experiences
+- Technical Skills
+- Language Skills
