@@ -58,6 +58,20 @@ h1 {
   letter-spacing: -0.025em;
 }
 
+.milestone {
+  margin: 0;
+  overflow-x: auto;
+  border: 1px solid var(--soft-line);
+  background: #000000;
+}
+
+.milestone img {
+  display: block;
+  width: 100%;
+  min-width: 860px;
+  height: auto;
+}
+
 .entry {
   margin-bottom: 18px;
 }

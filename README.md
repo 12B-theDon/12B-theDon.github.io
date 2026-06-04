@@ -7,6 +7,7 @@ GitHub Pages is configured to deploy from `main` / `docs`.
 ## Sections
 
 - Education
+- Life Milestone
 - Research Interests
 - Experiences
 - Technical Skills
