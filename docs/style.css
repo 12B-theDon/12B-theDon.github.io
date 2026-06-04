@@ -229,7 +229,7 @@ h4 {
   margin: 0;
   overflow-x: auto;
   border-radius: 14px;
-  background: #000000;
+  background: #ffffff;
 }
 
 .milestone img {
@@ -283,6 +283,43 @@ h4 {
 
 .skill-card p:last-child {
   margin-bottom: 0;
+}
+
+.skill-tags {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-tag-group {
+  display: grid;
+  gap: 10px;
+}
+
+.skill-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 13px;
+  border: 1px solid rgba(107, 91, 214, 0.22);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent-dark);
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 @media (max-width: 860px) {

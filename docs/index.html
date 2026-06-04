@@ -237,7 +237,7 @@
         margin: 0;
         overflow-x: auto;
         border-radius: 14px;
-        background: #000000;
+        background: #ffffff;
       }
 
       .milestone img {
@@ -266,6 +266,43 @@
       .interest-box ul {
         margin: 0;
         padding-left: 20px;
+      }
+
+      .skill-tags {
+        display: grid;
+        gap: 18px;
+      }
+
+      .skill-tag-group {
+        display: grid;
+        gap: 10px;
+      }
+
+      .skill-label {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 7px 13px;
+        border: 1px solid rgba(107, 91, 214, 0.22);
+        border-radius: 999px;
+        background: #ffffff;
+        color: var(--accent-dark);
+        font-weight: 800;
+        line-height: 1.1;
       }
 
       @media (max-width: 860px) {
@@ -298,7 +335,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
   </head>
   <body>
     <header class="site-header">
@@ -481,13 +518,42 @@
         <div class="cv-grid">
           <div class="skill-card">
             <h3>Technical Skills</h3>
-            <p>
-              <strong>Programming Language:</strong> C/C++, Python, MATLAB
-            </p>
-            <p>
-              <strong>Development:</strong> ROS2, ROS1, Git, Docker, Gazebo,
-              Mujoco, Auto Fusion
-            </p>
+            <div class="skill-tags">
+              <div class="skill-tag-group">
+                <span class="skill-label">Robotics & AI</span>
+                <div class="tag-list">
+                  <span class="tag">SLAM</span>
+                  <span class="tag">Localization</span>
+                  <span class="tag">Reinforcement Learning</span>
+                  <span class="tag">Imitation Learning</span>
+                  <span class="tag">World Models</span>
+                  <span class="tag">Vision-Language-Action Models</span>
+                  <span class="tag">Visual Odometry</span>
+                  <span class="tag">Object Detection & Tracking</span>
+                  <span class="tag">Robot Control</span>
+                </div>
+              </div>
+              <div class="skill-tag-group">
+                <span class="skill-label">Development</span>
+                <div class="tag-list">
+                  <span class="tag">ROS2</span>
+                  <span class="tag">ROS1</span>
+                  <span class="tag">Git</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Gazebo</span>
+                  <span class="tag">MuJoCo</span>
+                  <span class="tag">Auto Fusion</span>
+                </div>
+              </div>
+              <div class="skill-tag-group">
+                <span class="skill-label">Programming</span>
+                <div class="tag-list">
+                  <span class="tag">C/C++</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">MATLAB</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Language Skills</h3>
