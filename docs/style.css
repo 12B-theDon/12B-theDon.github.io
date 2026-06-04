@@ -7,6 +7,25 @@
   --accent: #6b5bd6;
   --accent-dark: #5042b8;
   --shadow: 0 8px 24px rgba(22, 22, 28, 0.14);
+  --soft-card: #fafafe;
+  --tag-bg: #ffffff;
+  --milestone-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101014;
+    --card: #1a1a22;
+    --text: #f3f3f5;
+    --muted: #b6b6c2;
+    --line: #31313b;
+    --accent: #8b7cff;
+    --accent-dark: #c6c0ff;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+    --soft-card: #222230;
+    --tag-bg: #181820;
+    --milestone-bg: #ffffff;
+  }
 }
 
 * {
@@ -173,7 +192,7 @@ h4 {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #fafafe;
+  background: var(--soft-card);
 }
 
 .interest-box h2 {
@@ -245,7 +264,7 @@ h4 {
   margin: 0;
   overflow-x: auto;
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--milestone-bg);
 }
 
 .about-milestone {
@@ -290,7 +309,7 @@ h4 {
 
 .cv-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 18px;
   margin-top: 34px;
 }
@@ -299,7 +318,7 @@ h4 {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #fafafe;
+  background: var(--soft-card);
 }
 
 .skill-card h3 {
@@ -342,7 +361,7 @@ h4 {
   padding: 7px 13px;
   border: 1px solid rgba(107, 91, 214, 0.22);
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--tag-bg);
   color: var(--accent-dark);
   font-weight: 800;
   line-height: 1.1;

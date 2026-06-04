@@ -18,6 +18,25 @@
         --accent: #6b5bd6;
         --accent-dark: #5042b8;
         --shadow: 0 8px 24px rgba(22, 22, 28, 0.14);
+        --soft-card: #fafafe;
+        --tag-bg: #ffffff;
+        --milestone-bg: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101014;
+          --card: #1a1a22;
+          --text: #f3f3f5;
+          --muted: #b6b6c2;
+          --line: #31313b;
+          --accent: #8b7cff;
+          --accent-dark: #c6c0ff;
+          --shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+          --soft-card: #222230;
+          --tag-bg: #181820;
+          --milestone-bg: #ffffff;
+        }
       }
 
       * {
@@ -185,7 +204,7 @@
         padding: 22px;
         border: 1px solid var(--line);
         border-radius: 16px;
-        background: #fafafe;
+        background: var(--soft-card);
       }
 
       .interest-box h2 {
@@ -253,7 +272,7 @@
         margin: 0;
         overflow-x: auto;
         border-radius: 14px;
-        background: #ffffff;
+        background: var(--milestone-bg);
       }
 
       .about-milestone {
@@ -283,7 +302,7 @@
 
       .cv-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 18px;
         margin-top: 34px;
       }
@@ -325,7 +344,7 @@
         padding: 7px 13px;
         border: 1px solid rgba(107, 91, 214, 0.22);
         border-radius: 999px;
-        background: #ffffff;
+        background: var(--tag-bg);
         color: var(--accent-dark);
         font-weight: 800;
         line-height: 1.1;
@@ -361,7 +380,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=6" />
+    <link rel="stylesheet" href="style.css?v=7" />
   </head>
   <body>
     <header class="site-header">
@@ -407,8 +426,14 @@
           <h1>Minhyeong Lee</h1>
           <p class="intro">
             I am an undergraduate student in Smart Mobility Engineering at Inha
-            University. My work focuses on robotics, embodied intelligence, and
-            learning-based robot control.
+            University, with experience in building robotic systems, developing
+            SLAM-based autonomous driving pipelines, and implementing imitation
+            and reinforcement learning in MuJoCo. Based on these experiences, I
+            am interested in general robot policies and Vision-Language-Action
+            models, particularly in bridging the gap between simulated training
+            and reliable real-world deployment through world-model-based policy
+            learning and robust robot control for complex human-centered
+            environments.
           </p>
           <div class="interest-box">
             <h2>Research Interests</h2>
@@ -608,7 +633,7 @@
           </div>
           <div class="skill-card">
             <h3>Language Skills</h3>
-            <p><strong>English:</strong> New TEPS(445), TOEIC 955, OPIC IH</p>
+            <p><strong>English:</strong> New TEPS(445), TOEIC(955), OPIC(IH)</p>
             <p><strong>Korean:</strong> Native</p>
           </div>
         </div>
