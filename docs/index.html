@@ -115,7 +115,7 @@
 
       .hero-card {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 300px;
+        grid-template-columns: minmax(0, 1fr) 220px;
         gap: 38px;
         align-items: center;
         padding: clamp(28px, 5vw, 48px);
@@ -202,7 +202,7 @@
       .profile-card img {
         display: block;
         width: 100%;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 1 / 1.18;
         border-radius: 18px;
         object-fit: cover;
         box-shadow: 0 14px 28px rgba(22, 22, 28, 0.18);
@@ -249,10 +249,21 @@
       }
 
       .milestone {
+        grid-column: 1 / -1;
         margin: 0;
         overflow-x: auto;
         border-radius: 14px;
         background: #ffffff;
+      }
+
+      .about-milestone {
+        grid-column: 1 / -1;
+        margin-top: 32px;
+      }
+
+      .about-milestone h2 {
+        margin-bottom: 18px;
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
       }
 
       .milestone img {
@@ -350,7 +361,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=5" />
   </head>
   <body>
     <header class="site-header">
@@ -415,6 +426,16 @@
         <figure class="profile-card">
           <img src="profile.jpg" alt="Portrait of Minhyeong Lee" />
         </figure>
+
+        <div class="about-milestone">
+          <h2>Life Milestone</h2>
+          <figure class="milestone">
+            <img
+              src="life_milestone.png"
+              alt="Life milestone timeline from 2024 to 2026 with robotics project images"
+            />
+          </figure>
+        </div>
       </section>
 
       <section class="section-card" aria-labelledby="news">
@@ -447,16 +468,6 @@
             </div>
           </article>
         </div>
-      </section>
-
-      <section class="section-card" aria-labelledby="life-milestone">
-        <h2 id="life-milestone">Life Milestone</h2>
-        <figure class="milestone">
-          <img
-            src="life_milestone.png"
-            alt="Life milestone timeline from 2024 to 2026 with robotics project images"
-          />
-        </figure>
       </section>
 
       <section id="cv" class="section-card">
