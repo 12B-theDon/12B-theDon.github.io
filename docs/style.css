@@ -265,6 +265,32 @@ h4 {
   gap: 24px;
 }
 
+.news-list {
+  display: grid;
+  gap: 34px;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.news-year {
+  color: var(--text);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.news-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
+  line-height: 1.45;
+}
+
 .timeline-item,
 .cv-entry {
   display: grid;
@@ -413,6 +439,7 @@ h4 {
 
 @media (max-width: 860px) {
   .hero-card,
+  .news-item,
   .timeline-item,
   .cv-entry,
   .cv-grid {

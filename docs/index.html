@@ -277,6 +277,32 @@
         gap: 24px;
       }
 
+      .news-list {
+        display: grid;
+        gap: 34px;
+      }
+
+      .news-item {
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 42px;
+        align-items: start;
+      }
+
+      .news-year {
+        color: var(--text);
+        font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      .news-text {
+        margin: 0;
+        color: var(--text);
+        font-size: clamp(1.18rem, 2vw, 1.55rem);
+        line-height: 1.45;
+      }
+
       .timeline-item,
       .cv-entry {
         display: grid;
@@ -396,6 +422,7 @@
 
       @media (max-width: 860px) {
         .hero-card,
+        .news-item,
         .timeline-item,
         .cv-entry,
         .cv-grid {
@@ -424,7 +451,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=8" />
+    <link rel="stylesheet" href="style.css?v=9" />
   </head>
   <body>
     <header class="site-header">
@@ -512,32 +539,22 @@
 
       <section class="section-card" aria-labelledby="news">
         <h2 id="news">News</h2>
-        <div class="timeline-list">
-          <article class="timeline-item">
-            <div class="date-badge">2025.08 – 2026.05</div>
-            <div class="timeline-content">
-              <h3>
-                Undergraduate Research Intern, Artificial Embodiment of Motion
-                Intelligence Systems Laboratory
-              </h3>
-              <p>
-                Team LAICA, Inha University — adaptive quadruped robot control,
-                robotic platforms, and embedded computing environments.
-              </p>
-            </div>
+        <div class="news-list">
+          <article class="news-item">
+            <div class="news-year">2025</div>
+            <p class="news-text">
+              🎉 Started as an Undergraduate Research Intern at the Artificial
+              Embodiment of Motion Intelligence Systems Laboratory, Inha
+              University.
+            </p>
           </article>
 
-          <article class="timeline-item">
-            <div class="date-badge">2024.05 – 2025.03</div>
-            <div class="timeline-content">
-              <h3>
-                Undergraduate Research Intern, Robot Computer Vision Laboratory
-              </h3>
-              <p>
-                RCV Formula, Team DAMVI, Inha University — SLAM, dynamic object
-                detection, tracking, and visual odometry.
-              </p>
-            </div>
+          <article class="news-item">
+            <div class="news-year">2024</div>
+            <p class="news-text">
+              🎉 Started as an Undergraduate Research Intern at the Robot
+              Computer Vision Laboratory, Inha University.
+            </p>
           </article>
         </div>
       </section>
