@@ -309,6 +309,40 @@ h4 {
   line-height: 1.5;
 }
 
+.material-list {
+  display: grid;
+  gap: 16px;
+}
+
+.material-link {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--soft-card);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.material-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.material-title {
+  color: var(--text);
+  font-size: 1.12rem;
+  font-weight: 900;
+}
+
+.material-url {
+  color: var(--muted);
+  font-size: 0.94rem;
+  overflow-wrap: anywhere;
+}
+
 .timeline-item,
 .cv-entry {
   display: grid;
