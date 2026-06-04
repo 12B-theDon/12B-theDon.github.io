@@ -57,10 +57,14 @@ a {
 
 .top-nav {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .top-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 14px;
   border-radius: 999px;
   color: var(--muted);
@@ -70,6 +74,17 @@ a {
 .top-nav a:hover {
   background: rgba(107, 91, 214, 0.12);
   color: var(--accent-dark);
+}
+
+.icon-link {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.icon-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 main {
