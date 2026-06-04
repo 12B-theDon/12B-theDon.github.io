@@ -21,6 +21,7 @@
         --soft-card: #fafafe;
         --tag-bg: #ffffff;
         --milestone-bg: #ffffff;
+        color-scheme: light;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -36,7 +37,38 @@
           --soft-card: #222230;
           --tag-bg: #181820;
           --milestone-bg: #ffffff;
+          color-scheme: dark;
         }
+      }
+
+      html[data-theme="light"] {
+        --bg: #f4f4f6;
+        --card: #ffffff;
+        --text: #111114;
+        --muted: #61616b;
+        --line: #e3e3e8;
+        --accent: #6b5bd6;
+        --accent-dark: #5042b8;
+        --shadow: 0 8px 24px rgba(22, 22, 28, 0.14);
+        --soft-card: #fafafe;
+        --tag-bg: #ffffff;
+        --milestone-bg: #ffffff;
+        color-scheme: light;
+      }
+
+      html[data-theme="dark"] {
+        --bg: #101014;
+        --card: #1a1a22;
+        --text: #f3f3f5;
+        --muted: #b6b6c2;
+        --line: #31313b;
+        --accent: #8b7cff;
+        --accent-dark: #c6c0ff;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+        --soft-card: #222230;
+        --tag-bg: #181820;
+        --milestone-bg: #ffffff;
+        color-scheme: dark;
       }
 
       * {
@@ -91,17 +123,23 @@
         gap: 10px;
       }
 
-      .top-nav a {
+      .top-nav a,
+      .theme-toggle {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 8px 14px;
+        border: 0;
         border-radius: 999px;
+        background: transparent;
         color: var(--muted);
+        font: inherit;
         font-weight: 700;
+        cursor: pointer;
       }
 
-      .top-nav a:hover {
+      .top-nav a:hover,
+      .theme-toggle:hover {
         background: rgba(107, 91, 214, 0.12);
         color: var(--accent-dark);
       }
@@ -115,6 +153,12 @@
       .icon-link svg {
         width: 25px;
         height: 25px;
+      }
+
+      .theme-toggle {
+        min-width: 46px;
+        height: 46px;
+        padding: 0 13px;
       }
 
       main {
@@ -167,7 +211,7 @@
 
       h1 {
         margin-bottom: 16px;
-        font-size: clamp(2.4rem, 7vw, 5rem);
+        font-size: clamp(2rem, 5vw, 3.8rem);
         line-height: 0.95;
         letter-spacing: -0.065em;
       }
@@ -380,7 +424,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="style.css?v=7" />
+    <link rel="stylesheet" href="style.css?v=8" />
   </head>
   <body>
     <header class="site-header">
@@ -388,6 +432,9 @@
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#cv">CV</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span aria-hidden="true">◐</span>
+        </button>
         <a
           class="icon-link"
           href="https://github.com/12B-theDon"
@@ -425,15 +472,15 @@
           <p class="eyebrow">About</p>
           <h1>Minhyeong Lee</h1>
           <p class="intro">
-            I am an undergraduate student in Smart Mobility Engineering at Inha
-            University, with experience in building robotic systems, developing
-            SLAM-based autonomous driving pipelines, and implementing imitation
-            and reinforcement learning in MuJoCo. Based on these experiences, I
-            am interested in general robot policies and Vision-Language-Action
-            models, particularly in bridging the gap between simulated training
-            and reliable real-world deployment through world-model-based policy
-            learning and robust robot control for complex human-centered
-            environments.
+            Thank you for visiting my page. I am an undergraduate student in
+            Smart Mobility Engineering at Inha University, with experience in
+            building robotic systems, developing SLAM-based autonomous driving
+            pipelines, and implementing imitation and reinforcement learning in
+            MuJoCo. Based on these experiences, I am interested in general robot
+            policies and Vision-Language-Action models, particularly in bridging
+            the gap between simulated training and reliable real-world
+            deployment through world-model-based policy learning and robust
+            robot control for complex human-centered environments.
           </p>
           <div class="interest-box">
             <h2>Research Interests</h2>
@@ -639,5 +686,22 @@
         </div>
       </section>
     </main>
+    <script>
+      const themeToggle = document.querySelector(".theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const initialTheme = storedTheme || (systemPrefersDark ? "dark" : "light");
+
+      document.documentElement.dataset.theme = initialTheme;
+
+      themeToggle?.addEventListener("click", () => {
+        const nextTheme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
   </body>
 </html>
