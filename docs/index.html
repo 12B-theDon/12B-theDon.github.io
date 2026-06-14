@@ -489,6 +489,19 @@
         line-height: 1.1;
       }
 
+      .site-footer {
+        width: min(1180px, calc(100% - 36px));
+        margin: -36px auto 44px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        text-align: right;
+      }
+
+      .site-footer time {
+        color: var(--text);
+        font-weight: 800;
+      }
+
       @media (max-width: 860px) {
         .hero-card,
         .news-item,
@@ -519,6 +532,10 @@
         .top-nav a {
           flex: 1;
           text-align: center;
+        }
+
+        .site-footer {
+          text-align: left;
         }
       }
     </style>
@@ -842,8 +859,15 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <span>Last updated from GitHub push:</span>
+      <time id="last-updated" datetime="2026-06-14T13:45:54+09:00">
+        Jun 14, 2026, 1:45 PM KST
+      </time>
+    </footer>
     <script>
       const themeToggle = document.querySelector(".theme-toggle");
+      const lastUpdated = document.querySelector("#last-updated");
       const storedTheme = localStorage.getItem("theme");
       const systemPrefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
@@ -858,6 +882,44 @@
         document.documentElement.dataset.theme = nextTheme;
         localStorage.setItem("theme", nextTheme);
       });
+
+      const formatUpdatedAt = (date) =>
+        new Intl.DateTimeFormat("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit",
+          timeZone: "Asia/Seoul",
+          timeZoneName: "short",
+        }).format(date);
+
+      fetch("https://api.github.com/repos/12B-theDon/12B-theDon.github.io")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Unable to load GitHub repository metadata.");
+          }
+
+          return response.json();
+        })
+        .then((repo) => {
+          if (!repo.pushed_at || !lastUpdated) {
+            return;
+          }
+
+          const pushedAt = new Date(repo.pushed_at);
+          lastUpdated.dateTime = pushedAt.toISOString();
+          lastUpdated.textContent = formatUpdatedAt(pushedAt);
+        })
+        .catch(() => {
+          if (!lastUpdated) {
+            return;
+          }
+
+          lastUpdated.textContent = formatUpdatedAt(
+            new Date(lastUpdated.dateTime)
+          );
+        });
     </script>
   </body>
 </html>
