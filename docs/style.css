@@ -95,6 +95,11 @@ a {
   text-decoration: none;
 }
 
+.lab-link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .site-header {
   position: sticky;
   top: 0;
