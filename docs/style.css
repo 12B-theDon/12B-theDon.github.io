@@ -33,8 +33,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
 .top-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: 14px; }
 .icon-link svg { width: 18px; height: 18px; }
 main { padding: 56px 0 64px; }
-h1, h2, p { margin-top: 0; }
-h1 { margin-bottom: 22px; font-size: 36px; line-height: 1.2; font-weight: 600; letter-spacing: -1px; }
+h2, p { margin-top: 0; }
 h2 { margin-bottom: 20px; font-size: 22px; line-height: 1.4; font-weight: 600; letter-spacing: -0.35px; }
 p { margin-bottom: 18px; }
 .hero-card { display: grid; grid-template-columns: minmax(0, 1fr) 180px; column-gap: 64px; row-gap: 44px; align-items: start; }
@@ -65,12 +64,10 @@ p { margin-bottom: 18px; }
   .top-nav { gap: 22px; }
   main { padding-top: 36px; }
   .hero-card { grid-template-columns: minmax(0, 1fr) 110px; gap: 28px 20px; }
-  h1 { font-size: 29px; }
   .about-copy { display: contents; }
-  .about-copy h1 { grid-column: 1; align-self: end; margin-bottom: 0; }
   .profile-card { grid-column: 2; grid-row: 1; margin: 0; }
-  .intro, .interest-box { grid-column: 1 / -1; }
-  .intro { margin: 0; }
+  .interest-box { grid-column: 1 / -1; }
+  .intro { grid-column: 1; grid-row: 1; margin: 0; }
   .milestone img { min-width: 740px; }
   .material-list { grid-template-columns: 1fr; gap: 18px; }
   .section-card { margin-top: 32px; padding-top: 24px; }
